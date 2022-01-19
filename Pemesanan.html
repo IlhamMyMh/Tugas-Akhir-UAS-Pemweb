@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- untuk menyesuaikan tampilan terhadap layar pengguna -->
+        <title>Konfirmasi Pemesanan - IMM TOUR HOTEL</title>
+        <link rel="stylesheet" type="text/css" href="CSS/Style pemesanan.css"
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    </head>
+    <body>
+
+        <!-- sidebar -->
+		<input type="checkbox" id="check">
+		<div class="sidebar">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="index.html">Kamar</a></li>
+				<li><a href="index.html">Galeri</a></li>
+				<li><a href="#kontak">Kontak</a></li>
+				<li><a href="aboutadmin.html">About Admin</a></li>
+			</ul>
+		</div>
+
+		<!-- bagian header -->
+		<header>
+			<div class="container">
+				<h1><a href="">IMM TOUR HOTEL</a></h1>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+				    <li><a href="index.html">Kamar</a></li>
+				    <li><a href="index.html">Galeri</a></li>
+					<li><a href="#kontak">Kontak</a></li>
+					<li><a href="aboutadmin.html">About Admin</a></li>
+				</ul>
+
+				<!-- menu mobile -->
+				<label for="check" class="mobile-menu"><i class="fas fa-bars fa-2x"></i></label>
+			</div>
+		</header><hr color="grey"><br>
+
+    <!-- bagian pengisian data -->
+    <section id="tentang" class="tentang">
+        <div class="container my-5 py-5">
+          <h1 align="center">Formulir Reservasi Penginapan Hotel Novotel Semarang</h1>
+          <p align="center">isi data anda pada formulir registrasi di bawah ini</p><br>
+            <div class="formulir">
+            <form action="#" method="" onsubmit="validasi()">
+                <div>
+                    <label  for="nama_lengkap">Nama Lengkap</label>
+                    <input  type="text" name="nama_lengkap" id="nama_lengkap" placeholder="Isi Nama Lengkap">
+                </div>
+                <div>
+                    <label  for="email">E-mail</label>
+                    <input  type="email" name="email" id="email" placeholder="Isi E-mail">
+                </div>
+                <div>
+                    <label for="no_tlp">Nomor Telepon</label>
+                    <input type="number" name="no_tlp" id="no_tlp" placeholder="Isi Nomor Telepon">
+                </div>
+                <div>
+                    <label for="negara">Asal Negara</label>
+                    <select id="negara" name="negara">
+                        <option value="indonesia">Indonesia</option>
+                        <option value="malaysia">Malaysia</option>
+                        <option value="brazil">Brazil</option>
+                        <option value="singapura">Singapura</option>
+                        <option value="brunei darussalam">Brunei Darussalam</option>
+                        <option value="jepang">Jepang</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="thailand">Thailand</option>
+                        <option value="filipina">Filipina</option>
+                        <option value="kamboja">Kamboja</option>
+                        <option value="laos">Laos</option>
+                        <option value="myanmar">Myanmar</option>
+                    </select>
+                </div><br>
+                <div>
+                    <label for="check_in">Check-in</label>
+                    <input type="date" id="check_in" name="check_in">
+                </div><br>
+                <div>
+                    <label for="check_out">Check-out</label>
+                    <input type="date" id="check_out" name="check_out">
+                </div><br>
+                <div>
+                    <label for="jumlah_orang">Jumlah orang</label>
+                    <input type="number" id="jumlah_orang" name="jumlah_orang" placeholder="Isi Jumlah orang">
+                </div><br>
+                <div>
+                    <label for="tipe_kamar">Tipe kamar</label>
+                    <select id="tipe_kamar" name="tipe_kamar">
+                        <option value="deluxe-room">Suite Room</option>
+                        <option value="grand-deluxe-room">Superior Room</option>
+                        <option value="executive-room">Eksekutif Room</option>
+                        <option value="junior-suite">Standard Room</option>
+                    </select>
+                </div><br>
+                <div>
+                    <label for="pesan_tambahan">Tambahan pesan yang ingin disampaikan...</label>
+                    <textarea cols="40" rows="5" name="pesan-tambahan" id="pesan-tambahan" placeholder="ketik pesan tambahan disini..."></textarea>
+                </div><br>
+                <center>
+                    <input type="submit" value="Konfirmasi Pemesanan"><br>
+                    <input type="reset" value="Ulang/Reset">
+                </center><br>
+            </form>
+        </div>
+    </section>
+
+    <!-- START JAVASCRIPT JAM DIGITAL -->
+    <h2 align="center">Diakses Pada Jam</h2>
+    <script>
+        window.setTimeout("waktu()", 1000);
+         
+        function waktu() {
+            var waktu = new Date();
+            setTimeout("waktu()", 1000);
+            document.getElementById("jam").innerHTML = waktu.getHours();
+            document.getElementById("menit").innerHTML = waktu.getMinutes();
+            document.getElementById("detik").innerHTML = waktu.getSeconds();
+        }
+    </script>
+    <!-- END JAVASCRIPT JAM DIGITAL -->
+
+      <!-- START OUTPUT JAM DIGITAL -->
+      <div class="jam-digital">
+        <div class="kotak">
+            <p id="jam"></p>
+        </div>
+        <div class="kotak">
+            <p id="menit"></p>
+        </div>
+        <div class="kotak">
+            <p id="detik"></p>
+        </div>
+    </div><br>
+    <!-- END OUTPUT JAM DIGITAL -->
+
+    <!-- bagian footer -->
+		<section id="kontak"></section>
+		<footer>
+			<h1 style="color: white" align="right">Alamat Kantor</h1>>
+			<p style="color: white" align="right">Jl. Punden Selatan Kaliwungu, Kendal</p>
+			<p style="color: white" align="right">Phone (032) 123456789</p><br>
+				<a href="https://www.instagram.com/ilham_mymh/" target="_blank"><img align="right" src="img/logo instagram.jpg" width="45px" alt=""></a>
+				<a href="https://twitter.com/Rito95311054" target="_blank"><img align="right" src="img/logo twitter.png" width="45px" alt=""></a>
+				<a href="https://www.facebook.com/ilhammaryanmahantara.ilhammaryanmahantara.7"><img align="right" src="img/logo fb.png" width="45px" alt=""></a>
+				<a href="https://www.youtube.com/channel/UCV01H2Cil2zzYgMDrh23Suw" target="_blank"><img align="right" src="img/logo youtube.png" width="60px" alt=""></a>
+			<h1 style="color: white" align="left">IMM<br>TOUR<br>HOTEL</h1>>
+			<p style="color: rgb(247, 211, 10)">Copyright @2022 IMM TOUR HOTEL all right reserved.</p>
+		</footer>
+		<!-- end -->
+
+        <script src="js/script pemesanan.js"></script>
+    </body>
+</html>
